@@ -12,10 +12,12 @@
 </script>
 
 <div class="container">
-  <CreateTodo />
-  {#each $todos as todo (todo.id)}
-    <Todo {todo} />
-  {/each}
+    <CreateTodo />
+    <div class="todos">
+      {#each $todos as todo (todo.id)}
+        <Todo {todo} />
+      {/each}
+    </div>
 </div>
 
 <style lang="scss">
